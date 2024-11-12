@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocal Verify - Secure Your Data</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Fullscreen container */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Fullscreen video */
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        /* Introduction overlay */
+        .intro-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            transition: opacity 1s ease;
+            animation: fadeIn 1.5s ease-out;
+        }
+        /* Headline and subheading styling */
+        .intro-overlay h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: slideDown 1.5s ease-out;
+        }
+        .intro-overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            max-width: 600px;
+            animation: slideUp 1.5s ease-out;
+        }
+        /* Enter button */
+        .enter-btn {
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #4a90e2;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeIn 2s ease-out;
+        }
+        .enter-btn:hover {
+            background: #e1e1e1;
+            transform: scale(1.05);
+        }
+        /* Fade out animation for overlay */
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop>
+        <source src="20.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Introduction Overlay -->
+    <div class="intro-overlay" id="introOverlay">
+        <h1>Welcome to Vocal Verify</h1>
+        <p>Revolutionizing data security with a powerful three-way authentication system. Your data is protected by a unique combination of PIN, pattern, and voice recognition, ensuring unparalleled security and convenience.</p>
+        <button class="enter-btn" onclick="enterSite()">Enter</button>
+    </div>
+
+    <script>
+        function enterSite() {
+            const overlay = document.getElementById('introOverlay');
+            overlay.classList.add('fade-out'); // Adds fade-out animation
+            setTimeout(() => {
+                window.location.href ="#"; // Redirects to home page
+            }, 1000); // Match this to the transition time for smooth exit
+        }
+    </script>
+
+</body>
+</html>
+
+

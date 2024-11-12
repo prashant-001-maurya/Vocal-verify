@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vocal Verify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color:transparent;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+        }
+        .contact-info, .contact-form {
+            margin-top: 20px;
+        }
+        .contact-info h2, .contact-form h2 {
+            color: #4a90e2;
+        }
+        .info-item {
+            margin-bottom: 10px;
+        }
+        .info-item strong {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <h2>Our Contact Information</h2>
+        <p class="info-item"><strong>Email:</strong> support@vocalverify.com</p>
+        <p class="info-item"><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p class="info-item"><strong>Address:</strong> 1234 Security St., Suite 500, Safe City, SC 12345</p>
+        <p class="info-item"><strong>Office Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="submit_contact_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

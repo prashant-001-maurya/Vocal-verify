@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Vocal Verify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #82e21b;
+            background-image: url("19.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color:red;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color:transparent;
+            backdrop-filter: blur(3px);
+            color: #0ce50c;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1{
+            color: rgb(245, 153, 15);
+        } h2 {
+            color: hsl(108, 94%, 50%);
+        }
+        .service {
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .service:hover {
+            background-color: #f0f8ff;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border-left: 4px solid #4a90e2;
+            background-color:white;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .service.active .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Our Services</h1>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>Multi-Layered Authentication Setup</h2>
+        <div class="content">
+            <p>We assist in integrating our three-way authentication system, which includes a secure PIN, pattern, and voice recognition, into your existing applications. Our team provides seamless setup support to ensure your platform's security is strengthened with minimal disruption.</p>
+        </div>
+    </div>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>Customized Security Solutions</h2>
+        <div class="content">
+            <p>Tailored security solutions to meet the unique needs of your business or application. We work closely with clients to develop and deploy customized features, such as additional authentication layers or specific access controls, based on user requirements.</p>
+        </div>
+    </div>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>24/7 Security Monitoring and Support</h2>
+        <div class="content">
+            <p>Continuous monitoring to detect any potential security threats and unauthorized access attempts. Our support team is available around the clock to assist with troubleshooting, updates, and guidance on maintaining high-level security.</p>
+        </div>
+    </div>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>Voice Recognition Calibration</h2>
+        <div class="content">
+            <p>Personalized voice recognition calibration for improved accuracy in user identification. We help users refine their voice profiles to ensure optimal performance and enhanced security.</p>
+        </div>
+    </div>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>Educational Resources and Training</h2>
+        <div class="content">
+            <p>Training sessions, workshops, and resources to help users understand and optimize their use of the Vocal Verify system. Security best practices and onboarding guidance to empower users and minimize risks associated with digital threats.</p>
+        </div>
+    </div>
+
+    <div class="service" onclick="toggleService(this)">
+        <h2>Data Security Audits and Updates</h2>
+        <div class="content">
+            <p>Regular audits to ensure your system remains compliant with the latest security standards. We provide updates to protect against new vulnerabilities and keep your authentication setup robust over time.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleService(service) {
+        service.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

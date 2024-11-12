@@ -1,0 +1,230 @@
+body {
+    
+    font-family: Arial, sans-serif; 
+    background:url("13.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;}
+    
+
+    .navbar {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        background-color: #9e0a0a;
+        color: black;
+    }
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .menu-icon span {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+    }
+    @media (max-width: 768px) {
+        .menu-icon {
+            display: flex; /* Make the hamburger visible on mobile */
+        }
+    
+        .navbar a {
+            display: none; /* Hide the navbar links on small screens */
+        }
+        .navbar.responsive a {
+            display: block; /* Show links when navbar has 'responsive' class */
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .pattern-grid {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+    }
+
+    canvas#patternCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .dot {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(135deg, hwb(320 32% 16%), hsl(322, 93%, 43%));
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        box-shadow: 0 4px 10px #df027fdb;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .dot:hover {
+        transform: scale(1.2);
+        box-shadow: 0 6px 15px hsla(0, 0%, 5%, 0.925);
+    }
+
+    .dot[data-index="1"] { top: 10px; left: 10px; }
+    .dot[data-index="2"] { top: 10px; left: 140px; }
+    .dot[data-index="3"] { top: 10px; left: 270px; }
+    .dot[data-index="4"] { top: 140px; left: 10px; }
+    .dot[data-index="5"] { top: 140px; left: 140px; }
+    .dot[data-index="6"] { top: 140px; left: 270px; }
+    .dot[data-index="7"] { top: 270px; left: 10px; }
+    .dot[data-index="8"] { top: 270px; left: 140px; }
+    .dot[data-index="9"] { top: 270px; left: 270px; }
+    
+
+
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border:2px solid grey;
+    ;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px
+}
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;}
+    input[type="email"]{
+        width: 80%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 3px;  }
+    input[type="tel"]{
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px;}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: hsl(130, 92%, 50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.pattern-grid {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+canvas#pattern-grid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Place the canvas below the dots */
+}
+
+.dot {
+    width: 30px; /* Increase the size */
+    height: 30px;
+    background: linear-gradient(135deg, #ff7b00, #fcdc04); /* Gradient effect */
+    border-radius: 50%; /* Keep it circular */
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transformation */
+}
+
+.dot:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.dot[data-index="1"] { top: 10px; left: 10px; }
+.dot[data-index="2"] { top: 10px; left: 140px; }
+.dot[data-index="3"] { top: 10px; left: 270px; }
+.dot[data-index="4"] { top: 140px; left: 10px; }
+.dot[data-index="5"] { top: 140px; left: 140px; }
+.dot[data-index="6"] { top: 140px; left: 270px; }
+.dot[data-index="7"] { top: 270px; left: 10px; }
+.dot[data-index="8"] { top: 270px; left: 140px; }
+.dot[data-index="9"] { top: 270px; left: 270px; }
+
+
+
+
+.pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.selected {
+    background-color: hsl(80, 100%, 50%);
+}
+
+  
+

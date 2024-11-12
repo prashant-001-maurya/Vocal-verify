@@ -1,0 +1,107 @@
+body{
+    
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url("1082.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    font-family: sans-serif;}
+
+    nav{
+        width:100%;
+        height:80px;
+        color: black;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+    .register a{
+        background-color: hsl(19, 89%, 48%);
+        font-family: sans-serif; 
+        text-decoration: none;
+        padding: 1em 1em;
+        right: 50px;
+        border-radius: 5px;
+        color: white;
+        transition: .4s;
+    }
+    
+    .register a:hover{
+        background-color:transparent;
+        border:3px solid indianred;
+    
+    }
+    .logo{
+        font-size: 2em;
+        letter-spacing: 3px;
+        color:#f3f3f3;
+        
+        
+    }
+    .menu a{
+        text-decoration: none;
+        color: rgb(248, 16, 163);
+        padding:10px 20px;
+        font-size: 28px;
+        position: relative;
+    }
+    .menu a:before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width:0%;
+        height:100%;
+        border-bottom: 2px solid indianred;
+        transition: 0.4s linear;
+
+    }
+    .menu a:hover:before{
+        width:90%;
+        height: 70%;
+    }
+    .h-txt{
+    max-width:650px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    color:white;
+   }  
+   .h-txt span{
+   letter-spacing: 5px;
+   }
+   .h-txt h1{
+    font-size: 3.5em;
+   }
+   .secure-link {
+    background-color: lightblue;
+    text-decoration: none;
+    padding:10px 20px;
+    color: white;
+    letter-spacing: 5px;
+    transition: 0.4s;
+
+}
+.secure-link:hover{
+    background: transparent;
+    border: 1px solid pink;
+}
+
+.login-link {
+    background-color: lightgreen;
+    text-decoration: none;
+    padding:10px 20px;
+    color: white;
+    letter-spacing: 5px;
+    transition: 0.4s;
+}
+.login-link:hover{
+    background: transparent;
+    border: 1px solid rgb(221, 111, 15);
+}
+
+    
+
+

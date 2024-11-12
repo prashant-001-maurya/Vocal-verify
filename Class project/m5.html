@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Vocal Verify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a4df23;
+            background-image:url("18.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: transparent;
+            backdrop-filter:blur(10px);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1{
+            color: rgb(245, 153, 15);
+        } h2 {
+            color: hsl(240, 3%, 7%);
+        }
+        .section {
+            margin-bottom: 20px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border-left: 4px solid #4a90e2;
+            background-color: #f9f9f9;
+        }
+        .section.active .content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>About Us</h1>
+    <div class="section" onclick="toggleSection(this)">
+        <h2>Who We Are?</h2>
+        <div class="content">
+            <ul>
+                <li>Dedicated to providing cutting-edge, multi-layered security solutions.</li>
+                <li>Committed to protecting digital identities with user-friendly technology.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" onclick="toggleSection(this)">
+        <h2>Our Mission</h2>
+        <div class="content">
+            <ul>
+                <li>Deliver reliable, high-level security for your data and digital life.</li>
+                <li>Combine simplicity and strong security to ensure seamless protection.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <h2>Our Technology: Vocal Verify’s Three-Way Authentication</h2>
+        <div class="content">
+            <ul>
+                <li><strong>PIN Security:</strong> A traditional PIN layer adds an initial level of protection.</li>
+                <li><strong>Customizable Pattern:</strong> Enhances security with a pattern-based lock for added defense.</li>
+                <li><strong>Voice Recognition:</strong> Advanced voice recognition ensures that only you can unlock your data.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <h2>Why Choose Vocal Verify?</h2>
+        <div class="content">
+            <ul>
+                <li>Provides robust, multi-layered security without compromising convenience.</li>
+                <li>Designed to integrate seamlessly with your everyday digital interactions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <h2>Our Commitment</h2>
+        <div class="content">
+            <ul>
+                <li>Continually advancing our technology to stay ahead of evolving security threats.</li>
+                <li>Ensuring your data remains secure today, tomorrow, and beyond.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSection(section) {
+        section.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Vocal Verify</title>
+    <link rel="stylesheet" href="m4.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="m2.html">Back</a>
+        <a href="M3.html">Home</a></div>
+    <div class="container">
+        <h2>Authentication</h2>
+        <div class="design">
+        <form id="Authentication">
+
+            <label>Draw a Pattern:</label>
+            <div class="pattern-grid" id="patternGrid">
+                <canvas id="patternCanvas" width="300" height="300"></canvas>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+                <div class="dot" data-index="6"></div>
+                <div class="dot" data-index="7"></div>
+                <div class="dot" data-index="8"></div>
+                <div class="dot" data-index="9"></div>
+            </div>
+            
+            <button type="button" onclick="clearPattern()" >Clear Pattern</button>
+            <p id="recordStatus">Verify your Voice:</p>
+            <button type="button" onclick="captureVoice()">Input Voice</button>
+            
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    </div>
+
+    <script src="m4.js"></script>
+</body>
+</html>

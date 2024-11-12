@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Vocal Verify</title>
+    <link rel="stylesheet" href="m1.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="M3.html">Home</a>
+        <a href="m5.html">About</a>
+        <a href="m6.html">Services</a>
+        <a href="m7.html">Contact</a>
+        <!-- Hamburger Menu Icon -->
+<div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+    </div>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="small-input" required placeholder="Enter your full name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" pattern="[0-9]{10}">
+
+            <label for="pin">Enter PIN:</label>
+            <input type="password" id="pin" name="pin" class="small-input" required minlength="4" maxlength="4">
+
+            <label>Draw a Pattern:</label>
+            <div class="pattern-grid" id="patternGrid">
+                <canvas id="patternCanvas" width="300" height="300"></canvas>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+                <div class="dot" data-index="6"></div>
+                <div class="dot" data-index="7"></div>
+                <div class="dot" data-index="8"></div>
+                <div class="dot" data-index="9"></div>
+            </div>
+            
+            <button type="button" onclick="clearPattern()">Clear Pattern</button>
+
+            <label>Voice Authentication (3 times):</label>
+            <button type="button" onclick="captureVoice()">Record Voice</button>
+            <p id="recordStatus">Please record your voice 3 times.</p>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <script src="M1.js"></script>
+</body>
+</html>
+
+
